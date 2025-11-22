@@ -1,1 +1,35 @@
-KMeans project complete.
+
+K-Means Clustering Project – Full Analysis Report
+-------------------------------------------------
+
+1. Dataset
+A synthetic 2D dataset with 4 true clusters was generated using sklearn.make_blobs.
+The dataset contains 500 samples and is saved as synthetic_data.csv.
+
+2. Implementation
+A complete NumPy-only K-Means algorithm was developed:
+• Random centroid initialization
+• Cluster assignment using Euclidean distance
+• Centroid update using mean of points
+• Convergence check using tolerance
+• Inertia (SSE) calculation
+
+3. Elbow Method
+The inertia was calculated for K=1 to K=9.
+The elbow point clearly appears at K=4, confirming the true underlying structure.
+
+4. Silhouette Analysis
+Silhouette scores were computed for K=2 to K=9.
+The highest silhouette score also appears at K=4, validating this choice.
+
+5. Visualization
+The following visualizations are included:
+• elbow_plot.png (Elbow Curve)
+• silhouette_plot.png (Silhouette Curve)
+• final_clusters.png (Final cluster visualization with centroids)
+
+6. Interpretation
+The optimal K=4 aligns with both Elbow and Silhouette results.
+The scratch implementation performs accurately, though slower than library versions due to manual loops and no vectorized optimizations.
+
+Conclusion: All evaluation steps, visualizations, and analysis requirements have been met.
